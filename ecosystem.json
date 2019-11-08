@@ -1,0 +1,30 @@
+{
+    "apps": [
+        {
+            "name": "express-server",
+            "script": "/home/ubuntu/deploy/express-server/current/bin/www",
+            "env": {
+                "COMMON_VARIABLE": "true"
+            },
+            "env_production": {
+                "NODE_ENV": "production"
+            }
+        }
+    ],
+    "deploy": {
+        "production": {
+            "user": "ubuntu",
+            "host": ["118.89.39.58"],
+            "port": "1994",
+            "ref": "origin/master",
+            "repo": "git@github.com:y19942026/express-server.git",
+            "path": "/home/ubuntu/deploy/express-server",
+            "ssh_options": "StrictHostKeyChecking=no",
+            "env": {
+                "NODE_ENV": "production"
+            }
+        }
+    }
+}
+
+    
